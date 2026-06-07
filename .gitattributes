@@ -1,0 +1,9 @@
+# تجاهل ملفات الـ C++ والـ Native من إحصائيات اللغة
+android/** linguist-documentation
+ios/** linguist-documentation
+windows/** linguist-documentation
+macof/** linguist-documentation
+linux/** linguist-documentation
+
+# التأكيد على أن ملفات الـ dart هي ملفات البرمجة الأساسية
+*.dart linguist-detectable=true
