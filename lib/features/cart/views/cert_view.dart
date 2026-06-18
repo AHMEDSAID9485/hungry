@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CertView extends StatelessWidget {
-  const CertView({super.key});
+class CartView extends StatelessWidget {
+  const CartView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text('CertView'),
+        child: Text('CartView'),
       ));
   }
 }
