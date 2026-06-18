@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hungry/core/constants/app_color.dart';
-import 'package:hungry/features/auth/view/login_view.dart';
+import 'package:hungry/features/auth/views/login_view.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -13,7 +13,7 @@ class SplashPage extends StatefulWidget {
 class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
-    Future.delayed(Duration(seconds: 3),()=> Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>  LoginPage())));
+    Future.delayed(Duration(seconds: 3),()=> Navigator.pushReplacement(context,MaterialPageRoute(builder: (context)=>  LoginView())));
     // TODO: implement initState
     super.initState();
   }

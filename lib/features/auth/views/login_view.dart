@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hungry/core/constants/app_color.dart';
-import 'package:hungry/features/auth/view/signup_view.dart';
+import 'package:hungry/features/auth/views/signup_view.dart';
 import 'package:hungry/features/auth/widgets/custom_buttom_auth.dart';
+import 'package:hungry/features/home/views/home_view.dart';
+import 'package:hungry/root.dart';
 import 'package:hungry/shared/Custom_text_form_field.dart';
 import 'package:hungry/shared/CustomText.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginView extends StatelessWidget {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
  TextEditingController emailController = TextEditingController();
  TextEditingController passwordController = TextEditingController();
 
-  LoginPage({super.key});
+  LoginView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +63,7 @@ class LoginPage extends StatelessWidget {
                 Gap(10),
                 CustomButtom(text: 'Login', onTap: () {
                   if (formKey.currentState!.validate()) {
-                    // Handle login logic
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Root()));
                   }
                 },),
                  Gap(10),
@@ -76,7 +78,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                         Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupPage()));
+                         Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupView()));
                       },
                       child: CustomText(
                         text: 'Sign Up',
