@@ -9,9 +9,10 @@ import 'package:hungry/shared/CustomText.dart';
 
 class LoginPage extends StatelessWidget {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
-   LoginPage({super.key});
-final TextEditingController emailController = TextEditingController();
-final TextEditingController passwordController = TextEditingController();
+ TextEditingController emailController = TextEditingController();
+ TextEditingController passwordController = TextEditingController();
+
+  LoginPage({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
