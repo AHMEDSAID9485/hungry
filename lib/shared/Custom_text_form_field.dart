@@ -38,8 +38,11 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       controller: widget.controller,
       obscureText: visible,
       style: const TextStyle(color: AppColor.whiteColor, fontSize: 15),
+      
       decoration: InputDecoration(
+        
         errorBorder: OutlineInputBorder(
+          
           borderRadius: BorderRadius.circular(18),
           borderSide: const BorderSide(color: AppColor.redColor, width: 1.2),
         ),
@@ -58,10 +61,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                   visible = !visible;
                   setState(() {});
                 },
-                child: Icon(visible ? Icons.visibility : Icons.visibility_off),
+                child: Icon(visible ? Icons.visibility : Icons.visibility_off,color: AppColor.whiteColor,),
               )
             : null,
-        fillColor: AppColor.primaryColor,
+        fillColor: AppColor.blackColor,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(18),
           borderSide: const BorderSide(color: AppColor.whiteColor, width: 1.2),
