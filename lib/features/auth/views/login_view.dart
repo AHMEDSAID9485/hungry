@@ -24,72 +24,74 @@ class LoginView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10),
           child: Form(
             key: formKey,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Gap(80),
-                SvgPicture.asset(
-                  'assets/logo/Hungry_.svg',
-                  height: 40,
-                  width: 40,
-                ),
-                CustomText(
-                  text: 'Welcome back!',
-                  fontSize: 20,
-                  fontWeight: FontWeight.w900,
-                  color: AppColor.whiteColor,
-                ),
-                Gap(50),
-                CustomTextFormField(text: 'Email', icon: Icons.email_outlined, controller: emailController,),
-                Gap(20),
-                CustomTextFormField(
-                  text: 'Password',
-                  icon: Icons.lock_outline,
-                  obscureText: true,
-                  controller: passwordController,
-                ),
-                Gap(3),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    CustomText(
-                      text: 'Forgot Password?',
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color:AppColor.greyColor,
-                    ),
-                  ],
-                ),
-                Gap(10),
-                CustomButtom(text: 'Login', onTap: () {
-                  if (formKey.currentState!.validate()) {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Root()));
-                  }
-                },),
-                 Gap(10),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomText(
-                      text: 'Don\'t have an account?',
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      color:AppColor.greyColor,
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                         Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupView()));
-                      },
-                      child: CustomText(
-                        text: 'Sign Up',
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Gap(80),
+                  SvgPicture.asset(
+                    'assets/logo/Hungry_.svg',
+                    height: 40,
+                    width: 40,
+                  ),
+                  CustomText(
+                    text: 'Welcome back!',
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                    color: AppColor.whiteColor,
+                  ),
+                  Gap(50),
+                  CustomTextFormField(text: 'Email', icon: Icons.email_outlined, controller: emailController,),
+                  Gap(20),
+                  CustomTextFormField(
+                    text: 'Password',
+                    icon: Icons.lock_outline,
+                    obscureText: true,
+                    controller: passwordController,
+                  ),
+                  Gap(3),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      CustomText(
+                        text: 'Forgot Password?',
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
-                        color:AppColor.whiteColor,
+                        color:AppColor.greyColor,
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                  Gap(10),
+                  CustomButtom(text: 'Login', onTap: () {
+                    if (formKey.currentState!.validate()) {
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Root()));
+                    }
+                  },),
+                   Gap(10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CustomText(
+                        text: 'Don\'t have an account?',
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color:AppColor.greyColor,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                           Navigator.push(context, MaterialPageRoute(builder: (context)=>SignupView()));
+                        },
+                        child: CustomText(
+                          text: 'Sign Up',
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color:AppColor.whiteColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),

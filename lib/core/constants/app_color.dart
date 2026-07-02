@@ -6,4 +6,6 @@ class AppColor {
   static const blackColor = Color(0xFF000000);
   static const greyColor = Color(0xFFCCCCCC);
   static const redColor = Color(0xFFFF0000);
+  static const graycolor2 = Color(0xff6A6A6A);
+  static const graycolor3 = Color.fromARGB(255, 201, 202, 203);
 }

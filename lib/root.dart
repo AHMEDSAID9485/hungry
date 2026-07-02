@@ -30,7 +30,10 @@ class _RootState extends State<Root> {
         padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
           color: AppColor.primaryColor,
-         borderRadius: BorderRadius.circular(12)
+         borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(12),
+            topRight: Radius.circular(12)
+         )
         ),
         child: BottomNavigationBar(
   showSelectedLabels: false,
