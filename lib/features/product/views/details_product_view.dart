@@ -153,55 +153,60 @@ class _DetailsProductViewState extends State<DetailsProductView> {
             List_of_sideOptions_widget(),
             // price and add to cart button
             Gap(35),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                // price
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CustomText(
-                      text: 'Total',
-                      color: AppColor.brwoncolr,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
-                    Text.rich(
-                      TextSpan(
-                        children: [
-                          TextSpan(
-                            text: '\$',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: AppColor.primaryColor,
-                              fontWeight: FontWeight.bold, // الكلمة الأولى Bold
-                            ),
-                          ),
-                          TextSpan(
-                            text: '12.99',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: AppColor.blackColor,
-                              fontWeight: FontWeight.bold, // الكلمة الأولى Bold
-                            ),
-                          ),
-                        ],
+            Container(
+            padding: const EdgeInsets.symmetric(horizontal: 5,vertical: 5),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: AppColor.whiteColor),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // price
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CustomText(
+                        text: 'Total',
+                        color: AppColor.brwoncolr,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
                       ),
-                    ),
-                  ],
-                ),
-                // navigation to cart page
-                CustomButtom(
-                  text: 'Add to Cart',
-                  width: 150,
-                  color: AppColor.primaryColor,
-                  size_text: 18,
-                  radis_circle: 18,
-                  color_text: AppColor.whiteColor,
-                  onTap: () {},
-                ),
-              ],
-            ),
+                      Text.rich(
+                        TextSpan(
+                          children: [
+                            TextSpan(
+                              text: '\$',
+                              style: TextStyle(
+                                fontSize: 20,
+                                color: AppColor.primaryColor,
+                                fontWeight: FontWeight.bold, // الكلمة الأولى Bold
+                              ),
+                            ),
+                            TextSpan(
+                              text: '12.99',
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: AppColor.blackColor,
+                                fontWeight: FontWeight.bold, // الكلمة الأولى Bold
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  // navigation to cart page
+                  CustomButtom(
+                    text: 'Add to Cart',
+                    width: 150,
+                    color: AppColor.primaryColor,
+                    size_text: 15,
+                    radis_circle: 18,
+                    color_text: AppColor.whiteColor,
+                    onTap: () {},
+                  ),
+                ],
+              ),
+          ),
           ],
         ),
       ),

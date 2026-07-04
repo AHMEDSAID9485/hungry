@@ -5,7 +5,7 @@ import 'package:hungry/shared/CustomText.dart';
 
 class CustomButtom extends StatelessWidget {
   const CustomButtom({
-    super.key, required this.text, this.onTap, this.width, this.color, this.color_text, this.size_text, this.radis_circle,
+    super.key, required this.text, this.onTap, this.width, this.color, this.color_text, this.size_text, this.radis_circle, this.height,
   });
 final String text;
 final void Function()? onTap;
@@ -14,12 +14,13 @@ final Color? color;
 final Color? color_text;
 final double? size_text;
 final double? radis_circle;
+final double? height;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 60,
+        height: height ?? 60,
         width: width,
         decoration: BoxDecoration(
           color: color ?? AppColor.whiteColor,
