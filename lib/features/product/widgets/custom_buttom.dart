@@ -5,27 +5,32 @@ import 'package:hungry/shared/CustomText.dart';
 
 class CustomButtom extends StatelessWidget {
   const CustomButtom({
-    super.key, required this.text, this.onTap,
+    super.key, required this.text, this.onTap, this.width, this.color, this.color_text, this.size_text, this.radis_circle,
   });
 final String text;
 final void Function()? onTap;
+final double? width;
+final Color? color;
+final Color? color_text;
+final double? size_text;
+final double? radis_circle;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: Container(
         height: 60,
-        width: double.infinity,
+        width: width,
         decoration: BoxDecoration(
-          color: AppColor.whiteColor,
-          borderRadius: BorderRadius.circular(12),
+          color: color ?? AppColor.whiteColor,
+          borderRadius: BorderRadius.circular(radis_circle ?? 12),
         ),
         child: Center(
           child: CustomText(
             text: text,
-            fontSize: 20,
+            fontSize: size_text ?? 20,
             fontWeight: FontWeight.bold,
-            color: AppColor.blackColor,
+            color: color_text ?? AppColor.blackColor,
           ),
         ),
       ),

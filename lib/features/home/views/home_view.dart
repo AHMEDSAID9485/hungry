@@ -56,7 +56,7 @@ class HomeView extends StatelessWidget {
                       onTap: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsProductView()));
                       },
-                      child: CardWidget(image: "assets/images/burer_test.png",nameItem: "2 Piece Fried Chicken",rate: "10.00",type: "Combo Meal"));
+                      child: CardWidget(image: "assets/images/Home_images/burer_test.png",nameItem: "2 Piece Fried Chicken",rate: "10.00",type: "Combo Meal"));
                   },
                 ),
               ),

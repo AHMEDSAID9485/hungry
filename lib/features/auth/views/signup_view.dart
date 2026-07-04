@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hungry/core/constants/app_color.dart';
-import 'package:hungry/features/auth/widgets/custom_buttom_auth.dart';
-import 'package:hungry/features/home/views/home_view.dart';
+import 'package:hungry/features/product/widgets/custom_buttom.dart';
 import 'package:hungry/root.dart';
 import 'package:hungry/shared/Custom_text_form_field.dart';
 import 'package:hungry/shared/CustomText.dart';
@@ -63,12 +62,13 @@ class SignupView extends StatelessWidget {
                     obscureText: true,
                     controller: confirmPasswordController,
                   ),
-                  Gap(10),
+                  Gap(20),
                   CustomButtom(text: 'Sign Up', onTap: () {
                     if (formKey.currentState!.validate()) {
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>Root()));
                     }
                   },),
+                  Gap(10),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

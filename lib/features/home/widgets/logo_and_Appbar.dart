@@ -23,7 +23,7 @@ class Logo_and_appbar extends StatelessWidget {
             radius: 25,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.asset('assets/images/main_profile.png'),
+              child: Image.asset('assets/images/Home_images/main_profile.png'),
             ),
           )
       ],
