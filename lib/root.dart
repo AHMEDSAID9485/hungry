@@ -14,8 +14,8 @@ class Root extends StatefulWidget {
 
 class _RootState extends State<Root> {
   int _currentIndex = 0;
-  
-  final List<Widget> screens = const  [
+
+  final List<Widget> screens = const [
     HomeView(),
     CartView(),
     OrderHistoryView(),
@@ -23,72 +23,82 @@ class _RootState extends State<Root> {
   ];
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       body: screens[_currentIndex],
       bottomNavigationBar: Container(
         padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
           color: AppColor.primaryColor,
-         borderRadius: BorderRadius.only(
+          borderRadius: BorderRadius.only(
             topLeft: Radius.circular(12),
-            topRight: Radius.circular(12)
-         )
+            topRight: Radius.circular(12),
+          ),
         ),
         child: BottomNavigationBar(
-  showSelectedLabels: false,
-  showUnselectedLabels: false,
-  backgroundColor: Colors.transparent,
-  type: BottomNavigationBarType.fixed,
-  currentIndex: _currentIndex,
-  onTap: (index) {
-    setState(() {
-      _currentIndex = index;
-    });
-  },
-  items: [
-    BottomNavigationBarItem(
-      icon: Image.asset(
-        'assets/images/home_icon.png', 
-        height: 24, 
-        width: 24,
-        // إذا كان الـ currentIndex يساوي 0 (يعني محدد) اجعله أبيض، وإلا اجعله رمادي
-        color: _currentIndex == 0 ? AppColor.whiteColor : AppColor.blackColor,
+          selectedItemColor: AppColor.whiteColor,
+          unselectedItemColor: AppColor.graycolor2,
+          // showSelectedLabels: ,
+          // showUnselectedLabels: false,
+          backgroundColor: Colors.transparent,
+          type: BottomNavigationBarType.fixed,
+          currentIndex: _currentIndex,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          items: [
+            BottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/images/home_icon.png',
+                height: 24,
+                width: 24,
+                // إذا كان الـ currentIndex يساوي 0 (يعني محدد) اجعله أبيض، وإلا اجعله رمادي
+                color: _currentIndex == 0
+                    ? AppColor.whiteColor
+                    : AppColor.graycolor2,
+              ),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/images/carr Background Removed 1.png',
+                height: 24,
+                width: 24,
+                // إذا كان الـ currentIndex يساوي 1 اجعله أبيض، وإلا رمادي
+                color: _currentIndex == 1
+                    ? AppColor.whiteColor
+                    : AppColor.graycolor2,
+              ),
+              label: 'Cart',
+            ),
+            BottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/images/Vector.png',
+                height: 24,
+                width: 24,
+                // إذا كان الـ currentIndex يساوي 2 اجعله أبيض، وإلا رمادي
+                color: _currentIndex == 2
+                    ? AppColor.whiteColor
+                    : AppColor.graycolor2,
+              ),
+              label: 'Order History',
+            ),
+            BottomNavigationBarItem(
+              icon: Image.asset(
+                'assets/images/user.png',
+                height: 24,
+                width: 24,
+                // إذا كان الـ currentIndex يساوي 3 اجعله أبيض، وإلا رمادي
+                color: _currentIndex == 3
+                    ? AppColor.whiteColor
+                    : AppColor.graycolor2,
+              ),
+              label: 'Profile',
+            ),
+          ],
+        ),
       ),
-      label: '',
-    ),
-    BottomNavigationBarItem(
-      icon: Image.asset(
-        'assets/images/carr Background Removed 1.png', 
-        height: 30, 
-        width: 30,
-        // إذا كان الـ currentIndex يساوي 1 اجعله أبيض، وإلا رمادي
-        color: _currentIndex == 1 ? AppColor.whiteColor : AppColor.blackColor,
-      ),
-      label: '',
-    ),
-    BottomNavigationBarItem(
-      icon: Image.asset(
-        'assets/images/Vector.png', 
-        height: 24, 
-        width: 24,
-        // إذا كان الـ currentIndex يساوي 2 اجعله أبيض، وإلا رمادي
-        color: _currentIndex == 2 ? AppColor.whiteColor : AppColor.blackColor,
-      ),
-      label: '',
-    ),
-    BottomNavigationBarItem(
-      icon: Image.asset(
-        'assets/images/user.png', 
-        height: 24, 
-        width: 24,
-        // إذا كان الـ currentIndex يساوي 3 اجعله أبيض، وإلا رمادي
-        color: _currentIndex == 3 ? AppColor.whiteColor : AppColor.blackColor,
-      ),
-      label: '',
-    ),
-  ],
-)),
     );
   }
 }
