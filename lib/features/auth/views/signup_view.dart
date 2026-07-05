@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hungry/core/constants/app_color.dart';
-import 'package:hungry/features/product/widgets/custom_buttom.dart';
+import 'package:hungry/shared/custom_buttom.dart';
 import 'package:hungry/root.dart';
 import 'package:hungry/shared/Custom_text_form_field.dart';
 import 'package:hungry/shared/CustomText.dart';
@@ -10,7 +10,7 @@ import 'package:hungry/shared/CustomText.dart';
 class SignupView extends StatelessWidget {
 
   SignupView({super.key});
-  GlobalKey<FormState> formKey = GlobalKey<FormState>();
+ final GlobalKey<FormState> formKey = GlobalKey<FormState>();
   final TextEditingController nameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -65,7 +65,7 @@ class SignupView extends StatelessWidget {
                   Gap(20),
                   CustomButtom(text: 'Sign Up', onTap: () {
                     if (formKey.currentState!.validate()) {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Root()));
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Root()));
                     }
                   },),
                   Gap(10),

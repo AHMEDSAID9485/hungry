@@ -3,15 +3,15 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hungry/core/constants/app_color.dart';
 import 'package:hungry/features/auth/views/signup_view.dart';
-import 'package:hungry/features/product/widgets/custom_buttom.dart';
+import 'package:hungry/shared/custom_buttom.dart';
 import 'package:hungry/root.dart';
 import 'package:hungry/shared/Custom_text_form_field.dart';
 import 'package:hungry/shared/CustomText.dart';
 
 class LoginView extends StatelessWidget {
-  GlobalKey<FormState> formKey = GlobalKey<FormState>();
- TextEditingController emailController = TextEditingController();
- TextEditingController passwordController = TextEditingController();
+ final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+ final TextEditingController emailController = TextEditingController();
+ final TextEditingController passwordController = TextEditingController();
 
   LoginView({super.key});
   @override
@@ -63,7 +63,7 @@ class LoginView extends StatelessWidget {
                   Gap(10),
                   CustomButtom(text: 'Login', onTap: () {
                     if (formKey.currentState!.validate()) {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>Root()));
+                    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Root()));
                     }
                   },),
                    Gap(10),

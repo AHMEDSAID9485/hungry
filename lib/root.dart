@@ -15,7 +15,7 @@ class Root extends StatefulWidget {
 class _RootState extends State<Root> {
   int _currentIndex = 0;
 
-  final List<Widget> screens = const [
+  final List<Widget> screens =  [
     HomeView(),
     CartView(),
     OrderHistoryView(),
