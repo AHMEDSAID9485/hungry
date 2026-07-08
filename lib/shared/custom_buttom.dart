@@ -28,6 +28,7 @@ final double? height;
         ),
         child: Center(
           child: CustomText(
+            decoration: TextDecoration.none,
             text: text,
             fontSize: size_text ?? 20,
             fontWeight: FontWeight.bold,

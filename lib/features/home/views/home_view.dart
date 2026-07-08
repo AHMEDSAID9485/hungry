@@ -23,24 +23,24 @@ class HomeView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Gap(35),
+             const Gap(35),
               // AppBar logo
-              Logo_and_appbar(),
+             const Logo_and_appbar(),
               // hello user
-              CustomText(
-                text: 'Hello, Rich Sonic',
+            const  CustomText(
+                text: 'Hello, Ahmed',
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
                 color: AppColor.graycolor2,
                 fontFamily: 'Poppins',
               ),
-              Gap(10),
+             const Gap(10),
               // Search
               SearchWidget(),
-              Gap(10),
+              const Gap(10),
               // CategoriesList
               CategoriesListWidget(),
-              Gap(10),
+              const Gap(10),
               // Gridview for card widget
               Expanded(
                 child: GridView.builder(
@@ -60,7 +60,7 @@ class HomeView extends StatelessWidget {
                   },
                 ),
               ),
-              Gap(5),
+             const Gap(5),
              ],
           ),
         ),

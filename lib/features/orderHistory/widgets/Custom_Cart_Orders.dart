@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gap/flutter_gap.dart';
 import 'package:hungry/core/constants/app_color.dart';
-import 'package:hungry/features/orderHistory/widgets/Custom_Row_in_Cart_History.dart';
+import 'package:hungry/shared/Custom_Row_Text_key_and_value.dart';
 import 'package:hungry/shared/custom_buttom.dart';
 
 class Custom_Cart_Orders extends StatelessWidget {
@@ -21,17 +21,17 @@ class Custom_Cart_Orders extends StatelessWidget {
             child: Column(
               children: [
                Image.asset('assets/images/Home_images/burer_test.png',height: 100,width: 120,),
-                Custom_Row_in_Cart_History(
+                CustomRowTextKeyAndValue(
      key_about_Row: 'Order name',
      value_about_Row: 'Hamburger',
                 ),
                 Gap(10),
-                Custom_Row_in_Cart_History(
+                CustomRowTextKeyAndValue(
      key_about_Row: 'Total price',
      value_about_Row: '\$25.00',
                 ),
                 Gap(10),
-                Custom_Row_in_Cart_History(
+                CustomRowTextKeyAndValue(
      key_about_Row: 'Status',
      value_about_Row: 'Delivered',
                 ),

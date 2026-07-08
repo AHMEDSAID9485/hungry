@@ -3,7 +3,7 @@ import 'package:flutter_gap/flutter_gap.dart';
 import 'package:hungry/core/constants/app_color.dart';
 import 'package:hungry/features/product/widgets/CustomTrackShape.dart';
 import 'package:hungry/features/product/widgets/List_of_sideOptions_widget.dart';
-import 'package:hungry/shared/custom_buttom.dart';
+import 'package:hungry/shared/CustomBottomSheet.dart';
 import 'package:hungry/features/product/widgets/list_of_toppings_widget.dart';
 import 'package:hungry/shared/CustomText.dart';
 
@@ -42,7 +42,7 @@ class _DetailsProductViewState extends State<DetailsProductView> {
                     children: [
                       Text.rich(
                         TextSpan(
-                          children: [
+                          children:const [
                             TextSpan(
                               text: 'Customize ',
                               style: TextStyle(
@@ -70,8 +70,8 @@ class _DetailsProductViewState extends State<DetailsProductView> {
                       //   fontSize: 14,
                       //   color: AppColor.blackColor,
                       // ),
-                      Gap(10),
-                      Row(
+                     const Gap(10),
+                     const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           CustomText(
@@ -82,7 +82,7 @@ class _DetailsProductViewState extends State<DetailsProductView> {
                           ),
                         ],
                       ),
-                      Gap(10),
+                      const Gap(10),
                       SliderTheme(
                         data: SliderTheme.of(context).copyWith(
                           thumbShape: const RoundSliderThumbShape(
@@ -110,7 +110,7 @@ class _DetailsProductViewState extends State<DetailsProductView> {
                           min: 1,
                         ),
                       ),
-                      Gap(10),
+                     const Gap(10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -131,82 +131,32 @@ class _DetailsProductViewState extends State<DetailsProductView> {
                 ),
               ],
             ),
-            Gap(15),
+            const Gap(15),
             // Toppings
-            CustomText(
+           const  CustomText(
               text: 'Toppings',
               color: AppColor.brwoncolr,
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
-            Gap(10),
+           const Gap(10),
             List_of_Toppings_widget(),
-            Gap(35),
+          const  Gap(35),
             // Side options
-            CustomText(
+          const  CustomText(
               text: 'Side options',
               color: AppColor.brwoncolr,
               fontSize: 20,
               fontWeight: FontWeight.bold,
             ),
-            Gap(10),
+            const Gap(10),
             List_of_sideOptions_widget(),
             // price and add to cart button
-            Gap(35),
-            Container(
-            padding: const EdgeInsets.symmetric(horizontal: 5,vertical: 5),
-            alignment: Alignment.center,
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(15),color: AppColor.whiteColor),
-            child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  // price
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      CustomText(
-                        text: 'Total',
-                        color: AppColor.brwoncolr,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      Text.rich(
-                        TextSpan(
-                          children: [
-                            TextSpan(
-                              text: '\$',
-                              style: TextStyle(
-                                fontSize: 20,
-                                color: AppColor.primaryColor,
-                                fontWeight: FontWeight.bold, // الكلمة الأولى Bold
-                              ),
-                            ),
-                            TextSpan(
-                              text: '12.99',
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: AppColor.blackColor,
-                                fontWeight: FontWeight.bold, // الكلمة الأولى Bold
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  // navigation to cart page
-                  CustomButtom(
-                    text: 'Add to Cart',
-                    width: 150,
-                    color: AppColor.primaryColor,
-                    size_text: 15,
-                    radis_circle: 18,
-                    color_text: AppColor.whiteColor,
-                    onTap: () {},
-                  ),
-                ],
-              ),
-          ),
+            Spacer(),
+            CustomBottomSheet(text: 'Add to Cart', onTap: () {
+              // Handle the "Add to Cart" button tap here
+            },)
+            
           ],
         ),
       ),
