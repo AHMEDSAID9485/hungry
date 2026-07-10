@@ -71,6 +71,7 @@ flutter:
     - assets/images/splash/
     - assets/images/details_images/burer_details_test.png
     - assets/images/payment_images/
+    - assets/images/Profile_images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
