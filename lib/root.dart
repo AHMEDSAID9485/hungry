@@ -39,7 +39,7 @@ class _RootState extends State<Root> {
           unselectedItemColor: AppColor.graycolor2,
           // showSelectedLabels: ,
           // showUnselectedLabels: false,
-          backgroundColor: Colors.transparent,
+          backgroundColor: AppColor.primaryColor,
           type: BottomNavigationBarType.fixed,
           currentIndex: _currentIndex,
           onTap: (index) {

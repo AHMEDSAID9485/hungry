@@ -13,6 +13,7 @@ class HungryApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        splashColor: Colors.transparent,
         scaffoldBackgroundColor: AppColor.whiteColor
       ),
       debugShowCheckedModeBanner: false,
